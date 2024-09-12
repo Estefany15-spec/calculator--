@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESTAMO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PRESTAMO</h1>
+        <form id="loan-form">
+            <label for="name">Nombre del Cliente:</label>
+            <input type="text" id="name" required>
+            
+            <label for="amount">Cantidad Prestada:</label>
+            <input type="number" id="amount" required>
+            
+            <label for="rate">Tasa Mensual (%):</label>
+            <input type="number" id="rate" step="0.01" required>
+            
+            <label for="weeks">Número de Semanas:</label>
+            <input type="number" id="weeks" required>
+            
+            <label for="start-date">Fecha de Inicio:</label>
+            <input type="date" id="start-date" required>
+            
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="schedule">
+            <h2>Cronograma de Pagos</h2>
+            <table id="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Semana</th>
+                        <th>Fecha de Pago</th>
+                        <th>Cuota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <button id="print-button">Imprimir Cronograma</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
